@@ -1,0 +1,10 @@
+.findContact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.findContact > label {
+  text-align: left;
+}

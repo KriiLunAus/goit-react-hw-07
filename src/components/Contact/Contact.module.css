@@ -1,0 +1,26 @@
+.contact {
+  width: 300px;
+  list-style: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.contact div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact p {
+  margin: 5px 0;
+  padding-left: 10px;
+}
+
+.contact button {
+  background-color: rgb(26, 26, 26);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
