@@ -2,28 +2,31 @@ import { IoPerson } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import css from "./Contact.module.css";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contactsSlice";
 
 const Contact = ({ contacts }) => {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-    return (<>
-        {contacts.map(({ id, name, number }) => {
-            return (
-                
-                <li id={id} className={css.contact}>
+  return (
+    <>
+      {contacts.map(({ id, name, number }) => {
+        return (
+          <li id={id} className={css.contact}>
             <div>
-        <p> <IoPerson />  { name }</p>
-        <p> <FaPhoneAlt />  { number }</p>
+              <p>
+                {" "}
+                <IoPerson /> {name}
+              </p>
+              <p>
+                {" "}
+                <FaPhoneAlt /> {number}
+              </p>
             </div>
-    <button onClick={()=> dispatch(deleteContact(id))}>Delete</button>
-    </li>
-    )
-        })}
-        
-    </>)
-}
-
-
+            <button>Delete</button>
+          </li>
+        );
+      })}
+    </>
+  );
+};
 
 export default Contact;
