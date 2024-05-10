@@ -7,6 +7,7 @@ const ContactList = () => {
   const selectName = useSelector(selectNameFilter);
 
   const contacts = useSelector(selectItems);
+  console.log(contacts);
 
   const sortedList = contacts.filter((contact) => {
     return contact.name.toLowerCase().includes(selectName.name.toLowerCase());

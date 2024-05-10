@@ -14,7 +14,7 @@ const App = () => {
     dispatch(fetchContacts());
   }, [dispatch]);
 
-  const { items, isLoading, error } = useSelector(selectContacts);
+  const { isLoading, error } = useSelector(selectContacts);
   return (
     <div className="app">
       <h1>Phonebook</h1>
