@@ -4,6 +4,7 @@ import { object, string, mixed } from "yup";
 import css from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
 import { addContact } from "../../redux/operations";
+import { nanoid } from "@reduxjs/toolkit";
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -40,6 +41,7 @@ const ContactForm = () => {
       addContact({
         name: values.name,
         number: values.number,
+        id: nanoid(),
       })
     );
     action.resetForm();
